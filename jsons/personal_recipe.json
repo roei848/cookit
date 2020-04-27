@@ -1,0 +1,18 @@
+// recipe that get data from user
+{
+  "id": 134143454256346326, //mongoId
+  "name": "cookie_monster",
+  "category": "desserts",
+  "sub_categories": ["cookies", "diet"],
+  "png": "cookie.png",
+  "type": "personal",
+  "recipe": {
+    "ingredients": {
+      "eggs": "8",
+      "flour": "1/2 kg",
+      "salt": "teaspoon"
+    },
+    "directions": ["boil water", "enter pasta", "enter more pasta"],
+    "estimated_time": "30 min"
+  }
+}

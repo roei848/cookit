@@ -1,0 +1,10 @@
+// recipe that uses url
+{
+  "id": 134143454256346326, //mongoId
+  "name": "cookie_crush",
+  "category": "desserts",
+  "sub_categories": ["cookies"],
+  "png": "cake.png",
+  "type": "url",
+  "url": "https://www.finecooking.com/recipes-menus/cookie_crush"
+}

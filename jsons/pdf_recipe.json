@@ -1,0 +1,10 @@
+// recipe that uses pdf
+{
+  "id": 134143454256346326, //mongoId
+  "name": "carrot_cake",
+  "category": "desserts",
+  "sub_categories": ["cakes", "diet"],
+  "png": "cake.png",
+  "type": "pdf",
+  "pdf": "carrot_cake.pdf"
+}

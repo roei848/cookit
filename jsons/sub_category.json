@@ -1,0 +1,5 @@
+// sub category model, exp: cookies in desserts
+{
+  "name": "cookies",
+  "png": "cookies.png" //optional
+}

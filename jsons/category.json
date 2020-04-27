@@ -1,0 +1,12 @@
+// sub category model, exp: cookies in desserts
+{
+  "id": 134143454256346326, //mongoId
+  "name": "desserts",
+  "png": "desserts.png", //optional
+  "sub_categories": [
+    {
+      "name": "cookies",
+      "png": "cookies.png" //optional
+    }
+  ]
+}
