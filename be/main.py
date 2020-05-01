@@ -44,6 +44,17 @@ def get_recipes_by_category_and_sub_category(category, sub_category):
     return res
 
 
+@app.route(base_url + "/recipes/favorite", methods=['GET'])
+def get_favored_recipes():
+    """
+    GET all recipes that are mark as favorite
+    """
+    query = {"favorite": True}
+    recipes = mongo_cookit.db.recipes.find(query)
+    res = dumps(recipes)
+    return res
+
+
 
 @app.errorhandler(404)
 def not_found(error=None):
