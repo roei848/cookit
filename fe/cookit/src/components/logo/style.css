@@ -1,5 +1,9 @@
 .logo {
-  height: 70px;
+  height: 120px;
   display: block;
   margin: 3px;
+  z-index: 10000;
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }

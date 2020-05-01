@@ -1,1 +1,2 @@
 export const FETCH_CATEGORIES = "FETCH_CATEGORIES";
+export const FETCH_RECIPES = "FETCH_RECIPES";

@@ -4,7 +4,6 @@ import { connect } from "react-redux";
 import _ from "lodash";
 import { Link } from "react-router-dom";
 import "./style.css";
-import Logo from "../logo/Logo";
 
 class Navbar extends React.Component {
   renderTabs() {
@@ -33,14 +32,7 @@ class Navbar extends React.Component {
   render() {
     return (
       <AppBar title="Cook-it" position="relative" className="app-bar-container">
-        <Tabs value={false}>
-          <Tab
-            component={React.forwardRef(() => (
-              <Logo />
-            ))}
-          ></Tab>
-          {this.renderTabs()}
-        </Tabs>
+        <Tabs value={false}>{this.renderTabs()}</Tabs>
       </AppBar>
     );
   }

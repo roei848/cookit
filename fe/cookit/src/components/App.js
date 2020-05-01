@@ -7,6 +7,8 @@ import _ from "lodash";
 import Navbar from "./navbar/Navbar";
 import Home from "./home/Home";
 import Category from "./categories/Category";
+import Logo from "./logo/Logo";
+import SubCategoryPage from "./categories/SubCategoryPage";
 
 class App extends React.Component {
   componentDidMount() {
@@ -17,23 +19,15 @@ class App extends React.Component {
     if (_.isEmpty(this.props.categories)) {
       return;
     } else {
-      const routes = this.props.categories.map((category) => {
-        return (
-          <Route
-            key={category.order}
-            path={`/${category.name}`}
-            exact
-            component={React.forwardRef(() => (
-              <Category name={category.hebrew_name} />
-            ))}
-          />
-        );
-      });
-
       return (
         <Switch>
           <Route path="/" exact component={Home} />
-          {routes}
+          <Route path="/:category" exact component={Category} />
+          <Route
+            path="/:category/:subCategory"
+            exact
+            component={SubCategoryPage}
+          />
         </Switch>
       );
     }
@@ -46,6 +40,7 @@ class App extends React.Component {
           <div>
             <Navbar />
             {this.renderRouter()}
+            <Logo />
           </div>
         </Router>
       </div>
