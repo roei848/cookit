@@ -2,17 +2,23 @@
 {
   "id": 134143454256346326, //mongoId
   "name": "cookie_monster",
+  "hebrew_name": "מפלצת העוגיות",
   "category": "desserts",
   "sub_categories": ["cookies", "diet"],
-  "png": "cookie.png",
+  "image": "https://miro.medium.com/max/615/0*vwtmE6kZFO0rIq9o.",
   "type": "personal",
+  "favorite": true,
   "recipe": {
-    "ingredients": {
-      "eggs": "8",
-      "flour": "1/2 kg",
-      "salt": "teaspoon"
-    },
-    "directions": ["boil water", "enter pasta", "enter more pasta"],
+    "ingredients": [
+      { "ingredient": "ביצים", "quantity": 8 },
+      { "ingredient": "קמח", "quantity": "חצי קילוגרם" },
+      { "ingredient": "קקאו", "quantity": "כף" }
+    ],
+    "directions": [
+      { "order": 1, "direction": "להרתיח מים" },
+      { "order": 2, "direction": "לשים פסטה" },
+      { "order": 3, "direction": "לשים עוד פסטה" }
+    ],
     "estimated_time": "30 min"
   }
 }

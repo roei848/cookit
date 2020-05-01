@@ -1,0 +1,40 @@
+.dialog {
+  width: 360px;
+  height: 450px;
+}
+
+.app-bar {
+  direction: ltr;
+}
+
+.tool-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dialog-title {
+  font-size: x-large !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+}
+
+.ingredients-list,
+.directions-list {
+  font-size: 20px;
+  font-family: sans-serif;
+}
+
+.ingredients-list > li,
+.directions-list > li {
+  margin-bottom: 6px;
+}
+
+.timer {
+  display: flex;
+  flex-flow: row-reverse;
+  font-size: x-large;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}

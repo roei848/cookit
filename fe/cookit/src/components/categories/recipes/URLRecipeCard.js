@@ -1,7 +1,7 @@
 import React from "react";
 import "../style.css";
 
-const RecipeCardURL = ({ recipe }) => {
+const URLRecipeCard = ({ recipe }) => {
   return (
     <a
       href={recipe.url}
@@ -21,4 +21,4 @@ const RecipeCardURL = ({ recipe }) => {
   );
 };
 
-export default RecipeCardURL;
+export default URLRecipeCard;

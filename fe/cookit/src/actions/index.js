@@ -1,5 +1,4 @@
 import { FETCH_CATEGORIES, FETCH_RECIPES } from "./types";
-import history from "../history";
 import _ from "lodash";
 import mongo_api from "../api/mongo_api";
 

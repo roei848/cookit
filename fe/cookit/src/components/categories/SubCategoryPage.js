@@ -2,7 +2,8 @@ import React from "react";
 import { connect } from "react-redux";
 import { fetchRecipes } from "../../actions";
 import _ from "lodash";
-import RecipeCardURL from "./recipes/RecipeCardURL";
+import URLRecipeCard from "./recipes/URLRecipeCard";
+import PersonalRecipeCard from "./recipes/PersonalRecipeCard";
 
 class SubCategoryPage extends React.Component {
   componentDidMount() {
@@ -17,13 +18,13 @@ class SubCategoryPage extends React.Component {
       return this.props.recipes.map((recipe, index) => {
         switch (recipe.type) {
           case "url":
-            return <RecipeCardURL recipe={recipe} key={index} />;
+            return <URLRecipeCard recipe={recipe} key={index} />;
           case "pdf":
             //Need to create RecipeCardPdf
             return <></>;
           case "personal":
             //Need to create RecipeCardPersonal
-            return <></>;
+            return <PersonalRecipeCard recipe={recipe} key={index} />;
           default:
             return <></>;
         }
