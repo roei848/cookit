@@ -2,6 +2,7 @@ import {
   FETCH_CATEGORIES,
   FETCH_RECIPES,
   FETCH_FAVORED_RECIPES,
+  UPDATE_FAVORITE,
 } from "./types";
 import _ from "lodash";
 import mongo_api from "../api/mongo_api";
@@ -24,4 +25,10 @@ export const fetchFavoredRecipes = () => async (dispatch) => {
   const response = await mongo_api.get("/recipes/favorite");
 
   dispatch({ type: FETCH_FAVORED_RECIPES, payload: response.data });
+};
+
+export const updateFavorite = (recipeName, body) => async (dispatch) => {
+  const response = await mongo_api.put(`/recipes/favorite/${recipeName}`, body);
+
+  dispatch({ type: UPDATE_FAVORITE, payload: response.data });
 };

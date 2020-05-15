@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./cook-it.png";
+import logo from "./cook-eat.png";
 import { Link } from "react-router-dom";
 import "./style.css";
 

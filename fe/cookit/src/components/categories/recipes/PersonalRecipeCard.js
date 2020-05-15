@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../style.css";
 import PersonalRecipeDialog from "./PersonalRecipeDialog";
+import FavoriteButton from "./FavoriteButton";
 
 const PersonalRecipeCard = ({ recipe }) => {
   const [dialogOpen, setDialog] = useState(false);
@@ -14,15 +15,16 @@ const PersonalRecipeCard = ({ recipe }) => {
   };
 
   return (
-    <div className="card" style={{ cursor: "pointer" }}>
+    <div className="card card-div" style={{ cursor: "pointer" }}>
       <div className="content" onClick={onOpen}>
-        <div className="header">{recipe.hebrew_name}</div>
+        <div className="card-header">{recipe.hebrew_name}</div>
         <img
           src={recipe.image}
           alt={recipe.hebrew_name}
           className="card-image"
         />
       </div>
+      <FavoriteButton recipe={recipe} />
       <PersonalRecipeDialog
         open={dialogOpen}
         onClose={onClose}

@@ -25,7 +25,7 @@ class Home extends React.Component {
             //Need to create RecipeCardPersonal
             return <PersonalRecipeCard recipe={recipe} key={index} />;
           default:
-            return <></>;
+            return <React.Fragment key={index}></React.Fragment>;
         }
       });
     }

@@ -2,3 +2,7 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+.card-div {
+  background-color: #b1b1b199 !important;
+}

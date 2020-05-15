@@ -1,23 +1,30 @@
 import React from "react";
 import "../style.css";
 
-const URLRecipeCard = ({ recipe }) => {
+import FavoriteButton from "./FavoriteButton";
+
+const URLRecipeCard = (props) => {
+  const { recipe } = props;
+
   return (
-    <a
-      href={recipe.url}
-      className="card"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <div className="card card-div">
       <div className="content">
-        <div className="header">{recipe.hebrew_name}</div>
-        <img
-          src={recipe.image}
-          alt={recipe.hebrew_name}
-          className="card-image"
-        />
+        <a
+          href={recipe.url}
+          className="card"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="header card-header">{recipe.hebrew_name}</div>
+          <img
+            src={recipe.image}
+            alt={recipe.hebrew_name}
+            className="card-image"
+          />
+        </a>
       </div>
-    </a>
+      <FavoriteButton recipe={recipe} />
+    </div>
   );
 };
 
